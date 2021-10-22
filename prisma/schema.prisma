@@ -9,3 +9,13 @@ datasource db {
   provider = "sqlite"
   url      = "file:./dev.db"
 }
+
+model User{
+  id          String @id @default(uuid())
+  name        String
+  github_is   Int
+  avatar_url  String
+  login       String
+
+  @@map("Users")
+}
